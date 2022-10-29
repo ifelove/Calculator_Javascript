@@ -33,6 +33,10 @@ class Calculator {
   clear() {
     this.updatedInput = "0";
     this.updatedResult = "";
+    this.updatedInput2 = "";
+    this.updatedResult2 = "";
+    this.inpu1Value1 = "";
+    this.input2Value2 = "";
   }
 
   //deleting the last input
@@ -71,20 +75,22 @@ class Calculator {
 
   // appending number to the screeen
   appendNumber(number) {
-    if (number === "." && this.updatedInput.includes(".")) return;
-    if (this.updatedInput == "0" && number == ".") {
-      this.updatedInput = "0" + number;
-    } else if (this.updatedInput == "0") {
-      this.updatedInput = number;
-    } else if (this.updatedInput == "0" && number == ".") {
-      this.updatedInput = "0" + number;
-    } else this.updatedInput += number;
+    //if second screen is active
+    if (container.classList.contains("change-screen")) {
+      //if working screen is screen 2
 
-    //if working screen is screen 2
-    //number.forEach((num, index) => {
-    //this.inpu1Value1 = number[index];
-    // this.input2Value2 = number[index++];
-    //});
+      this.inpu1Value1 = number;
+      this.input2Value2 = number;
+    } else {
+      if (number === "." && this.updatedInput.includes(".")) return;
+      if (this.updatedInput == "0" && number == ".") {
+        this.updatedInput = "0" + number;
+      } else if (this.updatedInput == "0") {
+        this.updatedInput = number;
+      } else if (this.updatedInput == "0" && number == ".") {
+        this.updatedInput = "0" + number;
+      } else this.updatedInput += number;
+    }
   }
 
   //appending operation to the screen
@@ -106,13 +112,16 @@ class Calculator {
 
   //updating the screen display
   UpdateDisplay() {
-    this.inputData.innerText = this.updatedInput; //ascerning inputdata to update data
-    this.resultData.innerText = this.updatedResult;
     //if working screen is screen 2
-    //this.inputData2.innerText = this.updatedInput2;
-    //this.resultData2.innerText = this.updatedResult2;
-    //this.input1.value = this.inpu1Value1;
-    //this.input2.value = this.input2Value2;
+    if (container.classList.contains("change-screen")) {
+      this.inputData2.innerText = this.updatedInput2;
+      this.resultData2.innerText = this.updatedResult2;
+      this.input1.value = this.inpu1Value1;
+      this.input2.value = this.input2Value2;
+    } else {
+      this.inputData.innerText = this.updatedInput; //ascerning inputdata to update data
+      this.resultData.innerText = this.updatedResult;
+    }
   }
 
   //computing the input data on the screen
@@ -127,7 +136,14 @@ class Calculator {
   //normal mode display
 }
 
-const calculator = new Calculator(inputData, resultData);
+const calculator = new Calculator(
+  inputData,
+  resultData,
+  input1,
+  input2,
+  inputData2,
+  resultData2
+);
 
 //Eevent listners
 
@@ -156,6 +172,7 @@ inputButtons.forEach((inputButton) => {
   inputButton.addEventListener("click", (e) => {
     //working on shift
     if (headerhint.classList.contains("active")) {
+      container.classList.add("change-screen");
       //console.log("contain")
 
       let maintarget;
