@@ -1,360 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIUcalculator</title>
-  <link rel="stylesheet" href="AIUcalculator.css" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-</head>
- <body> 
-  <div class="container"> 
-   <div class="header"> 
-    <div>
-      <span class="material-icons " id="menu">
-        menu
-        </span>
-    </div> 
-    <div>
-      <span class="material-icons" id="more">
-        more_horiz
-        </span>
-    </div> 
-  </div> 
-   <div class="display-wrapper"> 
-    <div class="header-hint">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIUcalculator</title>
+    <link rel="stylesheet" href="AIUcalculator.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <span class="material-icons" id="menu"> menu </span>
+        </div>
+        <div>
+          <span class="material-icons" id="more"> more_horiz </span>
+        </div>
+      </div>
+      <div class="display-wrapper">
+        <!--first screen-->
+        <div class="header-hint">
           <div class="shift-hint">SHIFT</div>
-            <div class="deg-hint">DEG</div>
-         
-    </div> 
-    <div class="data">
-    <div class="data-input"> <!--Data input display--> 
-    </div> <!--Result display--> 
-    <div class="data-result">
-  
+          <div class="deg-hint">DEG</div>
+        </div>
+        <div class="data">
+          <div class="data-input"></div>
+          <!--Result display-->
+          <div class="data-result"></div>
+        </div>
+        <!--Second screen-->
+
+        <div class="display-wrapper2">
+          <div class="header-hint2">
+            <div class="shift-hint2">SHIFT</div>
+            <div class="deg-hint2">DEG</div>
+          </div>
+          <div class="data2">
+            <div class="data-input2">
+              hhhh <span><input class="input1" /></span>,<span
+                ><input class="input2"
+              /></span>
+            </div>
+            <!--Result display-->
+            <div class="data-result2">jbkb</div>
+          </div>
+        </div>
+
+        <!--end of second screen-->
+      </div>
+      <section class="all-buttons">
+        <!--button top_layers-->
+        <div class="button-mainlayer">
+          <div>
+            <button id="shift-btn" class="shift-btn" data-num="shift">
+              SHIFT
+            </button>
+          </div>
+          <div>
+            <button>MENU</button>
+          </div>
+          <div>
+            <button><</button>
+          </div>
+          <div>
+            <button>></button>
+          </div>
+          <div>
+            <button id="delbtn" class="delbtn">X</button>
+          </div>
+          <div>
+            <button id="delbtn" class="clearbtn">AC</button>
+          </div>
+        </div>
+        <!--button layers-->
+        <div class="layers">
+          <!--start of layer1 button-->
+          <div class="layer1-btn">
+            <div class="sub-btn">
+              <div class="inner">DRG</div>
+              <button class="inner-btn">DRG</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">FSE</div>
+              <button class="inner-btn">E</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">MATRIX</div>
+              <button class="inner-btn">[]</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">n</div>
+              <button class="inner-btn">E</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">dy/dx</div>
+              <button class="inner-btn">$</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">CONST</div>
+              <button class="inner-btn">CONV</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">hyp</div>
+              <button class="inner-btn">π</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">SIN–1</div>
+              <button class="inner-btn">SIN</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">COS–1</div>
+              <button class="inner-btn">COS</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">TAN–1</div>
+              <button class="inner-btn">TAN</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">L</div>
+              <button class="inner-btn">i</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">logx–y</div>
+              <button class="inner-btn">e</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">lim</div>
+              <button class="inner-btn">x–1</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">x3</div>
+              <button class="inner-btn">x2</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">3√x</div>
+              <button class="inner-btn">√x</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">10x</div>
+              <button class="inner-btn">log</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">ex</div>
+              <button class="inner-btn">ln</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">x√y</div>
+              <button class="inner-btn">xy</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">STAT</div>
+              <button class="inner-btn">D°M°S°</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">ab/c</div>
+              <button class="inner-btn">b/c</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">Y</div>
+              <button class="inner-btn" id="vrbbtn">X</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">HISTORY</div>
+              <button class="inner-btn" id="vrbbtn">XY,M</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">M+</div>
+              <button class="inner-btn" id="vrbbtn">MR</button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">M-</div>
+              <button class="inner_btn" id="vrbbtn">x&gt;M</button>
+            </div>
+          </div>
+
+          <!--layer2-->
+
+          <div class="layer2-btn">
+            <div class="sub-btn">
+              <div class="inner">&gt;CPLX</div>
+              <button class="inner-btn numbtn data-input" id="btn" data-num="7">
+                7
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">infty</div>
+              <button class="inner-btn numbtn data-input" id="btn" data-num="8">
+                8
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">next</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="9">
+                9
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">%</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-input"
+                data-num="("
+              >
+                (
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">mod</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-input"
+                data-num=")"
+              >
+                )
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">n!</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="4">
+                4
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">nPr</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="5">
+                5
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">nCr</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="6">
+                6
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner" id="basenum">BIN</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-operation"
+                data-operation="*"
+              >
+                *
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner" id="basenum">OCT</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-operation"
+                data-operation="/"
+              >
+                /
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">gdc</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="1">
+                1
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">lmc</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="2">
+                2
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">abs</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="3">
+                3
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner" id="basenum">DEC</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-operation"
+                data-operation="+"
+              >
+                +
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner" id="basenum">HEX</div>
+              <button
+                id="btn"
+                class="inner-btn arthbtn data-operation"
+                data-operation="-"
+              >
+                -
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">OTHER</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="0">
+                0
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">ran#</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num=".">
+                .
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">ANS</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="">
+                +/-
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">EXP SI</div>
+              <button id="btn" class="inner-btn numbtn data-input" data-num="">
+                EXP
+              </button>
+            </div>
+
+            <div class="sub-btn">
+              <div class="inner">
+                =
+                <!-- </div> <button id="btn " class="inner-btn arthbtn data-operation">✓</button>  -->
+              </div>
+              <button id="btn" class="inner-btn arthbtn data-operation">
+                ✓
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    </div> 
-   </div> 
-   <section class="all-buttons"> <!--button top_layers--> 
-    <div class="button-mainlayer"> 
-     <div>
-      <button id="shift-btn" class="shift-btn" data-num="shift">SHIFT</button>
-     </div> 
-     <div>
-      <button>MENU</button>
-     </div> 
-     <div>
-      <button><</button>
-     </div> 
-     <div>
-      <button>></button>
-     </div> 
-     <div>
-      <button id="delbtn" class="delbtn">X</button>
-     </div> 
-     <div>
-      <button id="delbtn" class="clearbtn">AC</button>
-     </div> 
-    </div> <!--button layers--> 
-    <div class="layers"> <!--start of layer1 button--> 
-     <div class="layer1-btn"> 
 
-      <div class="sub-btn"> 
-       <div class="inner">
-        DRG
-       </div> <button class="inner-btn">DRG</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        FSE
-       </div> <button class="inner-btn">E</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        MATRIX
-       </div> <button class="inner-btn">[]</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        n
-       </div> <button class="inner-btn">E</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        dy/dx
-       </div> <button class="inner-btn">$</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        CONST
-       </div> <button class="inner-btn">CONV</button> 
-      </div> 
-
-   
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        hyp
-       </div> <button class="inner-btn">π</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        SIN–1
-       </div> <button class="inner-btn">SIN</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        COS–1
-       </div> <button class="inner-btn">COS</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        TAN–1
-       </div> <button class="inner-btn">TAN</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        L
-       </div> <button class="inner-btn">i</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        logx–y
-       </div> <button class="inner-btn">e</button> 
-      </div> 
-
-     
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        lim
-       </div> <button class="inner-btn">x–1</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        x3
-       </div> <button class="inner-btn">x2</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        3√x
-       </div> <button class="inner-btn">√x</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        10x
-       </div> <button class="inner-btn">log</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        ex
-       </div> <button class="inner-btn">ln</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        x√y
-       </div> <button class="inner-btn">xy</button> 
-      </div> 
-
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        STAT
-       </div> <button class="inner-btn">D°M°S°</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        ab/c
-       </div> <button class="inner-btn">b/c</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        Y
-       </div> <button class="inner-btn" id="vrbbtn">X</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        HISTORY
-       </div> <button class="inner-btn" id="vrbbtn">XY,M</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        M+
-       </div> <button class="inner-btn "id="vrbbtn">MR</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        M-
-       </div> <button class="inner_btn"id="vrbbtn">x&gt;M</button> 
-      </div> 
-
-     
-   
-     </div>
-
-     <!--layer2-->
-
-     <div class="layer2-btn">
-
-
-
-   
-     
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        &gt;CPLX
-       </div> <button class="inner-btn numbtn data-input" id="btn" data-num="7">7</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        infty
-       </div> <button class="inner-btn numbtn data-input" id="btn" data-num="8">8</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">next
-       </div> <button id="btn" class="inner-btn numbtn data-input" data-num="9">9</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        %
-       </div> <button id="btn" class="inner-btn arthbtn data-input" data-num="(">(</button> 
-      </div> 
-
-      <div class="sub-btn"> 
-       <div class="inner">
-        mod
-       </div> <button id="btn" class="inner-btn arthbtn data-input" data-num=")">)</button> 
-      </div> 
-
-     
-       <div class="sub-btn"> 
-        <div class="inner">
-         n!
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="4">4</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         nPr
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="5">5</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner">
-        nCr
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="6">6</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner" id="basenum">
-         BIN
-        </div> <button id="btn" class="inner-btn arthbtn data-operation" data-operation="*">*</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner" id="basenum">
-         OCT
-        </div> <button id="btn" class="inner-btn arthbtn data-operation" data-operation="/">/</button> 
-       </div> 
-
-      
-
-        <div class="sub-btn"> 
-         <div class="inner">
-          gdc
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="1">1</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         lmc
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="2" >2</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         abs
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="3">3</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner" id="basenum">
-         DEC
-        </div> <button id="btn" class="inner-btn arthbtn data-operation" data-operation="+">+</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner" id="basenum">
-         HEX
-        </div> <button id="btn" class="inner-btn arthbtn data-operation" data-operation="-">-</button> 
-       </div> 
-       
-
-
-        <div class="sub-btn"> 
-         <div class="inner">
-          OTHER
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num="0">0</button> 
-       </div>  
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         ran#
-        </div> <button id="btn" class="inner-btn numbtn data-input" data-num=".">.</button> 
-       </div>  
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         ANS
-        </div> <button  id="btn" class="inner-btn numbtn data-input" data-num="">+/-</button> 
-       </div> 
-
-       <div class="sub-btn"> 
-        <div class="inner">
-         EXP SI
-        </div> <button id="btn" class="inner-btn numbtn">EXP</button> 
-       </div> 
-
-       <div class="sub-btn "> 
-        <div class="inner">
-         =
-       <!-- </div> <button id="btn " class="inner-btn arthbtn data-operation">✓</button>  -->
-      </div> <button id="btn" class="inner-btn arthbtn data-operation">✓</button> 
-      
-       </div> 
-        
-       
-       </div>
-    </div>
-   </section> 
-  </div> 
-
-  <script src="AIUcalculator.js"></script>
- </body>
+    <script src="AIUcalculator.js"></script>
+  </body>
 </html>
